@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100%;
+  line-height: 100px;
+  border-bottom: 2px solid #c9c9c9;
+}
+.app-name {
+  font-size: 32px;
+  font-weight: 600;
+}
