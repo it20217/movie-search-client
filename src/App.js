@@ -6,7 +6,9 @@ function App() {
   return (
     <div>
       <Header/>
-      
+      <h1 className="text-3xl font-bold underline">
+      Movie app!
+    </h1>
     </div>
   );
 }
