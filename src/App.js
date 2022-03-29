@@ -1,14 +1,21 @@
 import React from 'react';
-import './App.css';
-import Header from "./components/Header"
+import { BrowserRouter as Router, Route ,Link, Routes} from "react-router-dom";
+import Header from "./components/Header/Header"
+import styles from "./App.module.scss"
+import Search from "./components/Search/Search"
 
 function App() {
   return (
-    <div>
+    <div className={styles["container-wrapper"]}>
       <Header/>
-      <h1 className="text-3xl font-bold underline">
-      Movie app!
-    </h1>
+       <div className={styles.container}>
+       <Router>
+        <Routes>
+         <Route exact path="/" element={<h1>Home Page</h1>} />
+         <Route exact path="search" element={<Search />} />
+        </Routes>
+      </Router>   
+      </div>
     </div>
   );
 }
