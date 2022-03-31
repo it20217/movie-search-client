@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route ,Link, Routes} from "react-router-dom";
 import Header from "./components/Header/Header"
 import styles from "./App.module.scss"
 import Search from "./components/Search/Search"
+import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </Routes>
       </Router>   
       </div>
+      <Footer />
     </div>
   );
 }

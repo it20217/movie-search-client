@@ -1,0 +1,26 @@
+$main-color: black;
+$font-color: white;
+
+.footer {
+	background-color: $main-color;
+	color: $font-color;
+	width: 90%;
+	height: 200px;
+	margin: 2% auto;
+	display: flex;
+	justify-content: space-around;
+}
+.links {
+	height: 100%;
+	width: 40%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-self: center;
+	margin: auto;
+}
