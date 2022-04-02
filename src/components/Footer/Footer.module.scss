@@ -12,7 +12,7 @@ $font-color: white;
 }
 .links {
 	height: 100%;
-	width: 40%;
+	width: 70%;
 	margin: auto;
 	display: flex;
 	justify-content: space-around;
@@ -20,7 +20,21 @@ $font-color: white;
 }
 
 .logo {
+	width: 10%;
 	display: flex;
+	padding-left: 2%;
+}
+.logo img {
+	width: 100%;
 	align-self: center;
+  }
+.side{
+	width: 15%;
 	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.side span{
+	font-weight: bold;
 }
