@@ -12,6 +12,16 @@ function Footer(){
 				<div>Link tag 2</div>
 				<div>Link tag 3</div>
 			</div>
+            <hr />
+            <div className={styles.side}>
+                <address>
+                    <span>Contact Us</span><br />
+                    Example name<br/>
+                    Example address<br/>
+                    Example phone<br/>
+                    Example email
+                </address>
+			</div>
 		</footer>
 	)
 }
