@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./Footer.module.scss"
 import projector from '../../assets/images/film-projector.webp'
 function Footer(){
