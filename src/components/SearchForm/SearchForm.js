@@ -6,6 +6,14 @@ function SearchForm(props) {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
+  const Enter = (event) => {
+    if (event.code === "Enter" || event.code === "NumpadEnter") {
+      console.log("Enter key was pressed. Run your function.");
+      event.preventDefault();
+      handleFind();
+    }
+  };
+
   const handleInput = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
@@ -14,7 +22,8 @@ function SearchForm(props) {
     navigate(`/search/${query}`);
     setQuery('');
   }
-  console.log(props.marginTop)
+
+  
   return(
     <div className={styles.search}>
       <div 
@@ -28,6 +37,7 @@ function SearchForm(props) {
             className={styles["search-input"]} 
             placeholder={"Spiderman: No Way Home"}
             onChange={handleInput}
+            onKeyDown={Enter}
           />
         </div>
         <div className={styles["btn-container"]}>

@@ -44,30 +44,7 @@ function Header() {
       {!path && 
 
         <SearchForm />
-        // <>
-        //   <div className={styles.search}>
-        //     <div className={styles["form-wrapper"]}>
-        //       <div className={styles["search-input"]}>
-        //         <input 
-        //           type="search" 
-        //           value={query}
-        //           className={styles["search-input"]} 
-        //           placeholder={"Spiderman: No Way Home"}
-        //           onChange={handleInput}
-        //         />
-        //       </div>
-        //       <div className={styles["btn-container"]}>
-        //         <button 
-        //           type="button"
-        //           className={styles["form-btn"]}
-        //           onClick={handleFind}
-        //         >
-        //           Find
-        //         </button>
-        //       </div>
-        //     </div>
-        //   </div>
-        // </>
+       
       }
       
      
