@@ -16,9 +16,9 @@ function App() {
          <Route exact path="/" element={<Home />} />
          <Route exact path="search" element={<Search />} />
         </Routes>
+        <Footer />
       </Router>   
       </div>
-      <Footer />
     </div>
   );
 }

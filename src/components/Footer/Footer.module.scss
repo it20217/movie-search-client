@@ -1,11 +1,14 @@
+$main-font: sans-serif;
 $main-color: #333;
-$font-color: white;
+$font-color: #c0c0c0;
+$link-color: #ecdb20;
 
 .footer {
+	font-family: $main-font;
 	background-color: $main-color;
 	color: $font-color;
 	width: 90%;
-	height: 200px;
+	height: 250px;
 	margin: 2% auto;
 	display: flex;
 	justify-content: space-around;
@@ -17,24 +20,61 @@ $font-color: white;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	
+	.link {
+		color: $link-color;
+		text-decoration: none;
+		font-weight: bold;
+		&:hover{
+			color: $font-color;
+		}
+	}
+	span{
+		font-size: .85em;
+	}
 }
 
 .logo {
-	width: 10%;
+	width: 80px;
 	display: flex;
-	padding-left: 2%;
+	padding-left: 4%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	img {
+		width: 100%;
+	  }
+	span{
+		padding-top: 5px;;
+	}
 }
-.logo img {
-	width: 100%;
-	align-self: center;
-  }
 .side{
 	width: 15%;
 	margin: auto;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	span{
+		font-weight: bold;
+		color: white;
+	}
 }
-.side span{
-	font-weight: bold;
+
+@media screen and (max-width: 900px){
+	.footer{
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		padding: 50px 0;
+	}
+    .links{
+        flex-direction: column;
+		padding: 40px 0 0;
+		span{
+			display: none;
+    	} 
+	}
+	.logo {
+		display: none;
+	}
 }
