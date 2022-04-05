@@ -13,6 +13,7 @@ $gold: #ecdb20;
   border-image: linear-gradient(to right,#f05a28,#e80a89);
   border-image-slice: 1;
   border-image-width: 0 0 10px 0;
+  z-index: 1000;
   >div {
     display: flex;
     place-self: center;
