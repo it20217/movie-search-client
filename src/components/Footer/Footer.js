@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./Footer.module.scss"
 import logo from "../../assets/images/dev-logo.png"
 function Footer(){

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import './fonts/Montserrat-Regular.ttf';
 
 ReactDOM.render(
   <React.StrictMode>
