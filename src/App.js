@@ -6,6 +6,7 @@ import Search from "./components/Search/Search"
 import Footer from "./components/Footer/Footer"
 import Movie from './components/Movie/Movie';
 import Home from './views/Home'
+import ReadMore from './components/ReadMore/ReadMore'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="search" element={<Search />} />
           <Route exact path="search/:searchQuery" element={<Search />} />
           <Route exact path="movie/:movieId" element={<Movie />} />
+          <Route exact path="read-more" element={<ReadMore />} />
           </Routes>
         </div>
         <Footer />

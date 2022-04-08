@@ -1,5 +1,6 @@
 import styles from "./Footer.module.scss"
 import logo from "../../assets/images/dev-logo.png"
+import { Link } from 'react-router-dom'
 function Footer(){
 	return(
 		<footer className={styles.footer}>
