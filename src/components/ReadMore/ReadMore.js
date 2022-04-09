@@ -45,44 +45,18 @@ function ReadMore(){
     if(omdb.length){
         return(
             <div >
-                {/*<div>
-                    <p>Read more about your Favourite movie</p>
-                    <input value={query} onChange={handleQuery} placeholder="Spiderman"/>
-                    <button className="button" onClick={searchOmdb}>Search</button>
-                    <div className={styles.container}>
-                        <div>
-                            <img src={omdb} alt="Movie poster" />
-                        </div>
-                        <div>
-                            Plot: {plot}
-                            Year: {year}
-                            Genre: {genre}
-                            Director: {director}
-                            Actors: {actors}
-                        
-                            <button className="button" onClick={searchWiki}>Read more</button>
-
-                            <p>
-                                {wiki}
-                            </p>
-                        </div>
-                    </div>
-        </div>*/}
-                <div className="divide-y divide-slate-100 ">
+              <div className="divide-y divide-slate-100 ">
                     
                 <div className="flex items-start space-x-6 p-6 min-w-0 relative flex-auto">
                         <h2 className="font-semibold text-slate-900 truncate pr-20">
-                            <p>Read more about your Favourite movie</p>
+                            <p className={styles.title}>Read more about your Favourite movie</p>
                             <input value={query} onChange={handleQuery} placeholder="Movie title"/>
                             <button
-                            onClick={searchOmdb}
-                            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm"
-                        >
-                            Search
-                        </button></h2>
+                                onClick={searchOmdb}
+                                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm">Search
+                            </button>
+                        </h2>
                 </div>
-
-
                   <div className="flex items-start space-x-6 p-6">
                     <img src={omdb} alt="Movie Poster" width="300" className="flex rounded-md bg-slate-100" />
                     <div className="min-w-0 relative flex-auto">
@@ -97,10 +71,7 @@ function ReadMore(){
                             </div>
                             <div>{rating}</div>
                         </div>
-                        {/*<div>
-                            <div className="sr-only">Rating</div>
-                            <div className="px-1.5 ring-1 ring-slate-200 rounded">{"PG12"}</div>
-                        </div>*/}
+
                         <div className="ml-2">
                             <dt className="sr-only">Year</dt>
                             <div>{year}</div>
@@ -116,16 +87,16 @@ function ReadMore(){
                         </div>
                       </div>
                         <div className="flex w-1/2 mt-8 font-normal min-h-400">
-                        <div>Director:&nbsp;</div>
-                        <div className="text-slate-400">{director}</div>
+                            <div>Director:&nbsp;</div>
+                            <div className="text-slate-400">{director}</div>
                         </div>
                         <div className="flex w-1/2 mt-8 font-normal min-h-400">
-                        <div>Actors:&nbsp;</div>
-                        <div className="text-slate-400">{actors}</div>
+                            <div>Actors:&nbsp;</div>
+                            <div className="text-slate-400">{actors}</div>
                         </div>
-                        <div className="flex w-1/2 mt-8 font-normal min-h-400">
-                        <div className="sr-only">Plot</div>
-                        <div className="text-slate-400">{plot}</div>
+                            <div className="flex w-1/2 mt-8 font-normal min-h-400">
+                            <div className="sr-only">Plot</div>
+                            <div className="text-slate-400">{plot}</div>
                         </div>
                         <div className="flex mt-8 font-normal">
                         <button
@@ -146,14 +117,16 @@ function ReadMore(){
         )}
     else{
         return (
-            <div>
-            <h3>Read more about your Favourite movie</h3>
-            <input value={query} onChange={handleQuery} placeholder="Movie Title"/>
-            <button onClick={searchOmdb}>Search</button>
-            <p>
-                {wiki}
-            </p>
-        </div>
+            <div className="flex items-start space-x-6 p-6 min-w-0 relative flex-auto">
+                    <h2 className="font-semibold text-slate-900 truncate pr-20">
+                        <p className={styles.title}>Read more about your Favourite movie</p>
+                        <input value={query} onChange={handleQuery} placeholder="Movie title"/>
+                        <button
+                            onClick={searchOmdb}
+                            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm">Search
+                        </button>
+                    </h2>
+            </div>
         )
     }
 }
