@@ -30,8 +30,9 @@ $black: #273461;
     height: 48px;
     font-size: 18px;
     color: $black;
-    border: 1px solid #273461;
+    border: 2px solid #273461;
     border-radius: 4px;
+    outline: none;
   }
   >input::placeholder {
     font-style: italic;
@@ -46,9 +47,10 @@ $black: #273461;
   margin: 0 10px;
   padding: 0 32px;
   height: 48px;
-  border:1px solid $gold ;
+  border:2px solid #273461 ;
   border-radius: 6px;
-  background-color: $gold;
-  font-size: 18px;
+  //background-color: $gold;
+  //background-image: linear-gradient(to right,#f05a28,#e80a89);
+  font-size: 24px;
   line-height: initial;
 }
