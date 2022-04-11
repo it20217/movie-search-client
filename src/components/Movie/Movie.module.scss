@@ -3,6 +3,7 @@
   flex-direction: row;
   min-height: 100vh;
   margin: auto;
+  
   > div {
     display: flex;
     flex-direction: row;
@@ -15,3 +16,4 @@
     }
   }
 }
+
