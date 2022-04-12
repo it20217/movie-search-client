@@ -34,10 +34,10 @@ function SearchForm(props) {
       >
         <div className={styles["search-input"]}>
           <input 
-            type="search" 
+            type="search"
             value={query}
             className={styles["search-input"]} 
-            style={{borderColor: (query !== '') ?  "#209fd9" : "#273461", borderWidth: (query !== '') ?  "3px" : "2px"}}
+            style={{borderColor: (query !== '') ?  "#ecdb20" : "#273461"}}
             placeholder={"Spiderman: No Way Home"}
             onChange={handleInput}
             onKeyDown={Enter}
@@ -46,7 +46,7 @@ function SearchForm(props) {
         <div className={styles["btn-container"]}>
           <button 
             type="button"
-            style={{borderColor: (query !== '') ?  "#209fd9" : "#273461", Color: (query !== '') ?  "#20d920" : "#273461", borderWidth: (query !== '') ?  "3px" : "2px"}}
+            style={{borderColor: (query !== '') ?  "#ecdb20" : "#273461", Color: (query !== '') ?  "#20d920" : "#273461"}}
             className={styles["form-btn"]}
             onClick={handleFind}
           >
