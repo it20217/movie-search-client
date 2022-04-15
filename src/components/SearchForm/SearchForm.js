@@ -1,6 +1,8 @@
 import {useState} from 'react';
+import { icons } from 'react-icons';
 import { useNavigate } from "react-router-dom";
 import styles from './SearchForm.module.scss';
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 function SearchForm(props) {
   const [query, setQuery] = useState('');
@@ -32,9 +34,10 @@ function SearchForm(props) {
       >
         <div className={styles["search-input"]}>
           <input 
-            type="search" 
+            type="search"
             value={query}
             className={styles["search-input"]} 
+            style={{borderColor: (query !== '') ?  "#ecdb20" : "#273461"}}
             placeholder={"Spiderman: No Way Home"}
             onChange={handleInput}
             onKeyDown={Enter}
@@ -43,10 +46,11 @@ function SearchForm(props) {
         <div className={styles["btn-container"]}>
           <button 
             type="button"
+            style={{borderColor: (query !== '') ?  "#ecdb20" : "#273461", Color: (query !== '') ?  "#20d920" : "#273461"}}
             className={styles["form-btn"]}
             onClick={handleFind}
           >
-            Find
+            < HiOutlineArrowRight />
           </button>
         </div>
       </div>

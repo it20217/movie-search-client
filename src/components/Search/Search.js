@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import genres from '../../genres'
 import styles from "./Search.module.scss"
 
 
@@ -10,27 +11,10 @@ function Search() {
   const { REACT_APP_API_KEY } = process.env;
   const [movies, setMovies] = useState([]);
 
-  const genres = [{"id":28,"name":"Action"},
-  {"id":12,"name":"Adventure"},
-  {"id":16,"name":"Animation"},
-  {"id":35,"name":"Comedy"},
-  {"id":80,"name":"Crime"},
-  {"id":99,"name":"Documentary"},
-  {"id":18,"name":"Drama"},
-  {"id":10751,"name":"Family"},
-  {"id":14,"name":"Fantasy"},
-  {"id":36,"name":"History"},
-  {"id":27,"name":"Horror"},
-  {"id":10402,"name":"Music"},
-  {"id":9648,"name":"Mystery"},
-  {"id":10749,"name":"Romance"},
-  {"id":878,"name":"Science Fiction"},
-  {"id":10770,"name":"TV Movie"},
-  {"id":53,"name":"Thriller"},
-  {"id":10752,"name":"War"},
-  {"id":37,"name":"Western"}]
+  console.log(movies)
 
   const getGenre = (y) => {
+    console.log("y:", y);
    return genres.find(x => x.id === y )
   };
   const getYear = (y) => {
@@ -74,7 +58,9 @@ function Search() {
                             <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z" />
                           </svg>
                         </div>
-                        <div>{movie.vote_average}</div>
+                        <div>
+                          {movie.vote_average}
+                        </div>
                       </div>
                       <div>
                         <div className="sr-only">Rating</div>
