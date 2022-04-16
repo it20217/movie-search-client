@@ -1,3 +1,23 @@
-.title {
-    font-size: large;
+$input-border-color: #cf4f4e;
+$input-border-hover: #333;
+.input {
+    width: 50%;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid $input-border-color;
+    border-radius: 3px;
+    box-shadow: 5px;
+    &:hover{
+        border: 1px solid $input-border-hover;
+    }
+    &::placeholder {
+        font-style: italic;
+        font-size: 18px;
+      }
+}
+.wrapper{
+    background-image: url('../../assets/images/film-projector.webp');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 60%;
 }

@@ -47,16 +47,7 @@ function ReadMore(){
             <div >
               <div className="divide-y divide-slate-100 ">
                     
-                <div className="flex items-start space-x-6 p-6 min-w-0 relative flex-auto">
-                        <h2 className="font-semibold text-slate-900 truncate pr-20">
-                            <p className={styles.title}>Read more about your Favourite movie</p>
-                            <input value={query} onChange={handleQuery} placeholder="Movie title"/>
-                            <button
-                                onClick={searchOmdb}
-                                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm">Search
-                            </button>
-                        </h2>
-                </div>
+
                   <div className="flex items-start space-x-6 p-6">
                     <img src={omdb} alt="Movie Poster" width="300" className="flex rounded-md bg-slate-100" />
                     <div className="min-w-0 relative flex-auto">
@@ -103,7 +94,7 @@ function ReadMore(){
                             onClick={searchWiki}
                             className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm"
                         >
-                            More details
+                            Other Information
                         </button>
                         </div>
                             <div className="flex w-1/2 mt-8 font-normal min-h-400 details">
@@ -111,21 +102,33 @@ function ReadMore(){
                             <div className="text-slate-400">{wiki}</div>
                         </div>
                     </div>
-                  </div>   
+                  </div> 
+
                 </div>
             </div> 
         )}
     else{
         return (
-            <div className="flex items-start space-x-6 p-6 min-w-0 relative flex-auto">
-                    <h2 className="font-semibold text-slate-900 truncate pr-20">
-                        <p className={styles.title}>Read more about your Favourite movie</p>
-                        <input value={query} onChange={handleQuery} placeholder="Movie title"/>
-                        <button
-                            onClick={searchOmdb}
-                            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm">Search
-                        </button>
-                    </h2>
+            <div className="flex items-start justify-center space-x-6 p-6 min-w-0 relative flex-auto">
+ 
+
+                {/* From: https://tailwindcomponents.com/component/section-hero-famms */}
+                <section className={styles.wrapper}>
+                    <div class=" h-screen bg-cover bg-center flex justify-items-center items-center">
+                        <div class="px-10 lg:px-32 xl:px-40">
+                            <h1 class="text-6xl font-semibold font-serif mb-6">
+                                <spian class="text-red-500">Need more information?</spian> <br />
+                                <span>Search below</span>
+                            </h1>
+                            <p class="text-lg max-w-md">Just enter the movie title to see additional information from an alternative movies collection database.</p><br />
+                            <input className={styles.input} value={query} onChange={handleQuery} placeholder="Movie title"/>
+                            <button
+                                onClick={searchOmdb}
+                                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-12 border border-gray-400 rounded shadow-md">Search
+                            </button>
+                        </div>
+                    </div>
+                </section>
             </div>
         )
     }
