@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from './Home.module.scss';
 import SearchForm  from '../components/SearchForm/SearchForm'
 import projector from '../assets/images/film-projector.webp';
+import projector1 from '../assets/images/stock-vector-set-of-popcorn-d-glasses-cinematograph-tape-cinema-ticket-drawn-vector-illustration-realistic-635850815.jpg';
 
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
       <div className={styles["image-container"]}>
       </div>
       <div className={styles["image-container"]}>
-        <img src={projector} alt="film-projector"/>
+        <img src={projector1} alt="film-projector"/>
       </div>
       <SearchForm 
         marginTop={80} 

@@ -42,16 +42,18 @@ function Movie() {
           <h1 className="mt-1 text-2xl font-semibold sm:text-slate-900 md:text-2xl ">{movie.original_title}</h1>
           <div className="mt-2 text-sm leading-4 font-medium sm:text-slate-500 dark:sm:text-slate-400">{movie.release_date}</div>
           <div className=" mt-4 text-sm leading-4 font-medium sm:text-slate-500 dark:sm:text-slate-400">
-            {movie?.genres?.map((genre) => {
-              return(<span className="mr-4">{genre.name}</span>)
+            {movie?.genres?.map((genre, index) => {
+              return(<span key={index} className="mr-4">{genre.name}</span>)
             })}
           </div>
         </div>
-        <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2   lg:row-end-6 lg:row-span-6 lg:mb-0">
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" className=" h-60 object-fit rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy"/>
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" className="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"/>
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" className="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"/>
-        </div>
+        {typeof movie?.backdrop_path == "string" &&
+            <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2   lg:row-end-6 lg:row-span-6 lg:mb-0">
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" className=" h-60 object-fit rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy"/>
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" className="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"/>
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" className="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy"/>
+            </div> 
+        }
       
 
         <div className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
@@ -59,7 +61,7 @@ function Movie() {
           <div className="sr-only">Reviews</div>
           <div className="text-indigo-600 flex items-center dark:text-indigo-400">
             <svg width="24" height="24" fill="none" aria-hidden="true" className="mr-1 stroke-current dark:stroke-indigo-500">
-              <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  Stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>{movie.vote_average} <span className="text-slate-400 font-normal">(128)</span></span>
           </div>

@@ -6,11 +6,11 @@ $black: #273461;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 0 20px;
+  margin: 0;
   white-space: nowrap;
 }
 .margin-top {
-  margin-top: 80px;
+  margin-top: 62px;
 }
 
 .form-wrapper {
@@ -30,7 +30,7 @@ $black: #273461;
     height: 48px;
     font-size: 18px;
     color: $black;
-    border: 3px solid #273461;
+    border: 1px solid #273461;
     border-radius: 4px;
     outline: none;
   }
@@ -54,7 +54,7 @@ $black: #273461;
   margin: 0 10px;
   padding: 0 32px;
   height: 48px;
-  border:3px solid #273461 ;
+  border:1px solid #273461 ;
   border-radius: 6px;
   //background-color: $gold;
   //background-image: linear-gradient(to right,#f05a28,#e80a89);
