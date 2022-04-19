@@ -3,6 +3,8 @@
   position: relative;
   flex-direction: column;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   min-width: 390px;
   min-height: 100vh;
 }

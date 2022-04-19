@@ -3,12 +3,12 @@ import styles from "./Navbar.module.scss"
 import logo from "../../assets/images/dev-logo.png"
 import { HiOutlineChat } from "react-icons/hi";
 
-function Navbar(isShown) {
+function Navbar(props) {
 
-  console.log(isShown);
+  console.log(props.showNavbar);
 
   return(
-    <div className={styles.Navbar}>
+    <div className={`${styles.Navbar} ${props.showNavbar ?  styles.movedOut : styles.movedIn}`}>
       <div className="flex bg-gray-200">
         {/* <!-- container --> */}
 
@@ -19,7 +19,7 @@ function Navbar(isShown) {
           <ul>
             {/* <!-- Items Section --> */}
             <li className="hover:bg-gray-100">
-              <div className="h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500">
+              <div className="h-16 px-6 flex-col flex justify-center items-center w-full focus:text-orange-500">
                 <Link to="/">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -36,7 +36,7 @@ function Navbar(isShown) {
               </div>
             </li>
             <li className="hover:bg-gray-100">
-              <div className="h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500">
+              <div className="h-16 px-6 flex-col flex justify-center items-center w-full focus:text-orange-500">
                 <Link to="/contact-us">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 

@@ -24,7 +24,7 @@ function App() {
     <div className={styles["container-wrapper"]}>
       <Router>
         <Header setShowNavbar= {() => {handleNavbar()} }/>
-        < Navbar/>
+        < Navbar showNavbar={showNavbar}/>
         <div className={styles.container}>
           <Routes>
           <Route exact path="/" element={<Home />} />
