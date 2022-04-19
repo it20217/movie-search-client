@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useNavigate, useLocation } from "react-router-dom"
 import logo from "../../assets/images/dev-logo.png"
 import SearchForm  from '../SearchForm/SearchForm'
 import styles from "./Header.module.scss";
 import { HiOutlineMenu } from "react-icons/hi";
 
-function Header() {
+function Header(props) {
 
   const [query, setQuery] = useState('');
   const [path, setPath] = useState(false);
@@ -20,6 +20,7 @@ function Header() {
     navigate(`/search/${query}`);
     setQuery('');
   }
+  
 
  useEffect(() => {
     location.pathname.localeCompare("/") === 0 
@@ -47,8 +48,10 @@ function Header() {
        
       }
       
-     
-      <div className={styles["menu-icon-div"]}>
+      <div 
+        className={styles["menu-icon-div"]}
+        onClick={props.setShowNavbar}
+      >
         < HiOutlineMenu/>
       </div>
     </div>
