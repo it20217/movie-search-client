@@ -2,12 +2,12 @@ $gold: #ecdb20;
 
 .header {
   background-color: #FFF;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: row;
-  min-height: 80px;
+  height: 120px;
   width: 100%;
   border-bottom: 20px solid;
   border-image: linear-gradient(to right,#f05a28,#e80a89);

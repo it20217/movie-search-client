@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header"
 import Navbar from "./components/Navbar/Navbar"
@@ -10,6 +10,7 @@ import Movie from './components/Movie/Movie';
 import Home from './views/Home'
 import ReadMore from './components/ReadMore/ReadMore'
 import ContactUs from './components/ContactUs/ContactUs'
+import Page404 from './components/Error/Page404'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         < Navbar showNavbar={showNavbar}/>
         <div className={styles.container}>
           <Routes>
+          <Route path="*" element={<Page404 />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="search" element={<Search />} />
           <Route exact path="search/:searchQuery" element={<Search />} />
