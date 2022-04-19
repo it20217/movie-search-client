@@ -1,0 +1,31 @@
+$input-border-color: #cf4f4e;
+$input-border-hover: #333;
+.wrapper{
+    display: flex;
+    background-image: url('../../assets/images/frame.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 52%;
+}
+input, textarea{
+    
+    width: 80%;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid $input-border-color;
+    border-radius: 3px;
+    box-shadow: 5px;
+    &:hover{
+        border: 1px solid $input-border-hover;
+    }
+    &::placeholder {
+        font-style: italic;
+        font-size: 18px;
+      }
+}
+
+.warning{
+    font-size: .75rem;
+    font-weight: bold;
+    color: $input-border-color;
+}
