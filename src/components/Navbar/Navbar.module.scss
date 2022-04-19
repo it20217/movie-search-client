@@ -1,0 +1,14 @@
+.Navbar {
+  position: fixed;
+  top: 20%;
+  left: 99% ;
+  z-index: 1001;
+}
+.movedOut, .movedIn:hover {
+  transform: translateX(-60px);
+  transition: 0.5s ease-in-out ;
+}
+.movedIn {
+  transform: translateX(0px);
+  transition: 1s ease-in-out ;
+}
