@@ -39,7 +39,7 @@ function Header(props) {
      >
       <img src={logo}  alt="Logo" />
      </div>
-      <div className={styles["app-name"]}>
+      <div className={`${styles["app-name"]} text-gray-800`}>
         Movie app!
       </div>
       {!path && 
