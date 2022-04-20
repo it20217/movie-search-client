@@ -19,14 +19,14 @@ function ReadMore(){
         e.preventDefault()
         setQuery(e.target.value)
     }
+    // Search for additional information from Wikipedia
     async function searchWiki(e){
         e.preventDefault()
         var responce = await axios.get('https://en.wikipedia.org/api/rest_v1/page/summary/'+title)
         setWiki(responce.data.extract)
     }
 
-
-    console.log(wiki);
+    // Get movie details from OMDB movie database
     async function searchOmdb(e){
         setWiki("")
         setQuery("")
@@ -40,14 +40,12 @@ function ReadMore(){
         setDirector(responce.data.Director)
         setActors(responce.data.Actors)
         setRating(responce.data.imdbRating)
-        // console.log(responce.data)
     }
     if(omdb.length){
         return(
-            <div >
-              <div className="divide-y divide-slate-100 ">
-                    
-
+            <div>
+            {/* Render movie details page */}
+              <div className="divide-y divide-slate-100">               
                   <div className="flex items-start space-x-6 p-6">
                     <img src={omdb} alt="Movie Poster" width="300" className="flex rounded-md bg-slate-100" />
                     <div className="min-w-0 relative flex-auto">
@@ -110,17 +108,15 @@ function ReadMore(){
     else{
         return (
             <div className="flex items-start justify-center space-x-6 p-6 min-w-0 relative flex-auto">
- 
-
-                {/* From: https://tailwindcomponents.com/component/section-hero-famms */}
+                {/* Render "Read More" search page*/}
                 <section className={styles.wrapper}>
-                    <div class=" h-screen bg-cover bg-center flex justify-items-center items-center">
-                        <div class="px-10 lg:px-32 xl:px-40">
-                            <h1 class="text-6xl font-semibold font-serif mb-6">
-                                <spian class="text-red-500">Need more information?</spian> <br />
+                    <div className="h-screen bg-cover bg-center flex justify-items-center items-center">
+                        <div className="px-10 lg:px-32 xl:px-40">
+                            <h1 className="text-6xl font-semibold font-serif mb-6">
+                                <spian className="text-red-500">Need more information?</spian> <br />
                                 <span>Search below</span>
                             </h1>
-                            <p class="text-lg max-w-md">Just enter the movie title to see additional information from an alternative movies collection database.</p><br />
+                            <p className="text-lg max-w-md">Just enter the movie title to see additional information from an alternative movies collection database.</p><br />
                             <input className={styles.input} value={query} onChange={handleQuery} placeholder="Movie title"/>
                             <button
                                 onClick={searchOmdb}

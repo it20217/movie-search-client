@@ -45,7 +45,7 @@ $link-color: white;
 	align-items: center;
 	span{
 		font-weight: bold;
-		color: white;
+		color: $link-color;
 	}
 }
 .project{
@@ -55,7 +55,7 @@ $link-color: white;
 	margin: auto;
 	padding-bottom: 20px;
 	a, span{
-		color: white;
+		color: $link-color;
 	}
 	a:hover{
 		color: $font-hover;

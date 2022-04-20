@@ -32,6 +32,8 @@ function ContactUs() {
 
   function handleForm(e){
     e.preventDefault();
+
+    // Name field validation
     if (!name){
       setNameWarning("Incorrect value")
       setSendForm(false)
@@ -40,6 +42,8 @@ function ContactUs() {
       setNameWarning("")
       setSendForm(true)
     }
+
+    // Tel number field validation
     if (!tel){
       setTelWarning("Incorrect value")
       setSendForm(false)
@@ -61,6 +65,8 @@ function ContactUs() {
         setSendForm(true)
       }
     }
+
+    // Email field validation
     if (!email){
       setEmailWarning("Incorrect value")
       setSendForm(false)
@@ -75,6 +81,8 @@ function ContactUs() {
         }
       }
     }
+
+    // Message field validation
     if (!message){
       setMessageWarning("Incorrect value")
       setSendForm(false)
@@ -85,6 +93,8 @@ function ContactUs() {
     }
     displayMessage();
   }
+
+  // Display message after checking all the fields
   function displayMessage(){
     if(!nameWarning && !telWarning && !emailWarning && !messageWarning){
       setSubmitForm(`Thank you for your message ${name}. We will contact you shortly.`);
@@ -96,12 +106,14 @@ function ContactUs() {
 
   return(
     <div>
-      <div className={styles.wrapper}>
+      <main className={styles.wrapper}>
+
+        { /* Form */ }
         <form className="h-screen bg-cover bg-center flex justify-items-center items-center">
           <div className="px-10 lg:px-32 xl:px-40">
             <h1 class="text-6xl font-semibold font-serif mb-6">
                 <spian className="text-red-500 bg-white">Have a Question?</spian> <br />
-                <span className="bg-white">Sent us a message</span>
+                <span className="bg-white">Send us a message</span>
             </h1>
             <label>Name</label><br/>
             <input type="text" className={styles.name} onChange={handleName} placeholder="Enter your name" /><br/>
@@ -121,9 +133,11 @@ function ContactUs() {
             </h1>
           </div>
         </form>
+
+        { /* Side picture */ }
         <div className={styles.image}>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
