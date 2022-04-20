@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useNavigate, useLocation } from "react-router-dom"
-import logo from "../../assets/images/dev-logo.png"
+import logo from "../../assets/images/cinema-154392__340.webp"
 import SearchForm  from '../SearchForm/SearchForm'
 import styles from "./Header.module.scss";
 import { HiOutlineMenu } from "react-icons/hi";
