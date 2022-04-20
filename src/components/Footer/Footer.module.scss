@@ -1,32 +1,31 @@
-$main-font: sans-serif;
 $main-color: #333;
 $font-color: #c0c0c0;
-$link-color: #ecdb20;
+$font-hover: #cf4f4e;
+$link-color: white;
 
-.footer {
-	font-family: $main-font;
+.wrapper{
 	background-color: $main-color;
+}
+.footer {
 	color: $font-color;
-	width: 90%;
+	width: 100%;
 	height: 250px;
 	margin: 2% auto;
+	padding: 0 20%;
 	display: flex;
 	justify-content: space-around;
 }
 .links {
 	height: 100%;
 	width: 70%;
-	margin: auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	
 	.link {
 		color: $link-color;
 		text-decoration: none;
-		font-weight: bold;
 		&:hover{
-			color: $font-color;
+			color: $font-hover;
 		}
 	}
 	span{
@@ -35,21 +34,12 @@ $link-color: #ecdb20;
 }
 
 .logo {
-	width: 80px;
+	width: 100px;
 	display: flex;
-	padding-left: 4%;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	img {
-		width: 100%;
-	  }
-	span{
-		padding-top: 5px;;
-	}
 }
 .side{
-	width: 15%;
 	margin: auto;
 	display: flex;
 	align-items: center;
@@ -58,22 +48,21 @@ $link-color: #ecdb20;
 		color: white;
 	}
 }
+.project{
+	color: $font-color;
+	width:50%;
+	text-align: center;
+	margin: auto;
+	padding-bottom: 20px;
+	a, span{
+		color: white;
+	}
+	a:hover{
+		color: $font-hover;
+	}
+}
 
-@media screen and (max-width: 900px){
-	.footer{
-		width: 100%;
-		flex-direction: column-reverse;
-		justify-content: center;
-		align-items: center;
-		padding: 50px 0;
-	}
-    .links{
-        flex-direction: column;
-		padding: 40px 0 0;
-		span{
-			display: none;
-    	} 
-	}
+@media screen and (max-width: 700px){
 	.logo {
 		display: none;
 	}
