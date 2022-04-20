@@ -10,7 +10,7 @@ function Footer(){
                 {/* Footer Logo */}
                 <div className={styles.logo}>
                     <Link to="/">
-                        <img clssName={styles.pic} src={logo} alt="Logo"/>
+                        <img className={styles.pic} src={logo} alt="Logo"/>
                     </Link>
                 </div>
 
