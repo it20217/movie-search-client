@@ -113,7 +113,7 @@ function ReadMore(){
                     <div className="h-screen bg-cover bg-center flex justify-items-center items-center">
                         <div className="px-10 lg:px-32 xl:px-40">
                             <h1 className="text-6xl font-semibold font-serif mb-6">
-                                <spian className="text-red-500">Need more information?</spian> <br />
+                                <span className="text-red-500">Need more information?</span> <br />
                                 <span>Search below</span>
                             </h1>
                             <p className="text-lg max-w-md">Just enter the movie title to see additional information from an alternative movies collection database.</p><br />

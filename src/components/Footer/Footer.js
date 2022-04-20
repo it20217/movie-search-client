@@ -1,5 +1,5 @@
 import styles from "./Footer.module.scss"
-import logo from "../../assets/images/dev-logo.png"
+import logo from "../../assets/images/cinema-154392__340.webp"
 import { Link } from 'react-router-dom'
 
 function Footer(){
