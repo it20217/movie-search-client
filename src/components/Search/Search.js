@@ -1,29 +1,38 @@
 import {useState, useEffect} from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import genres from '../../genres'
-import styles from "./Search.module.scss"
 
 
 function Search() {
 
+  //useParams returns an object of URL parameters
   let { searchQuery } = useParams();
+
+  let params = useParams();
+
+  console.log(searchQuery, params)
+
   const navigate = useNavigate();
+
+  //Refer to .env for API key
   const { REACT_APP_API_KEY } = process.env;
+
   const [movies, setMovies] = useState([]);
 
-  console.log(movies)
-
+  // Movie object return genres as a id number. Each number related to certain genre. Function getGenre returns genre name as String. Refer to genres.json
   const getGenre = (y) => {
     console.log("y:", y);
    return genres.find(x => x.id === y )
   };
+
+  // convert date format YYYY-MM-DD to YYYY using String.slice
   const getYear = (y) => {
    return y.slice(0, 4)
   };
 
   
   
-
+// FetchAPI to get movie search result as JSON object
   useEffect(() => {
     async function handleFind () {
       try {
@@ -86,7 +95,6 @@ function Search() {
                     </div>
                     <div className="flex mt-8 font-normal">
                       <button
-                        //onClick={console.log('click')}
                         onClick={() => {navigate(`/movie/${movie.id}`)}}
                         className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-sm"
                       >

@@ -1,11 +1,8 @@
 import { Link } from 'react-router-dom'
 import styles from "./Navbar.module.scss"
-import logo from "../../assets/images/dev-logo.png"
-import { HiOutlineChat } from "react-icons/hi";
 
 function Navbar(props) {
 
-  console.log(props.showNavbar);
 
   return(
     <div className={`${styles.Navbar} ${props.showNavbar ?  styles.movedOut : styles.movedIn}`}>

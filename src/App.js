@@ -17,6 +17,7 @@ function App() {
   
   const [showNavbar, setShowNavbar] = useState(false);
 
+  //Show navbar state switch function to switch on/off Navbar component
   const handleNavbar = () => {
     setShowNavbar(!showNavbar);  
   }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 export default function Page404() {
 
+  // useNavigate hook let to navigate programmatically 
   const navigate = useNavigate();
 
 

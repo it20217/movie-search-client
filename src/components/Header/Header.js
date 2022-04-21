@@ -7,22 +7,19 @@ import { HiOutlineMenu } from "react-icons/hi";
 
 function Header(props) {
 
-  const [query, setQuery] = useState('');
   const [path, setPath] = useState(false);
+
+  // useNavigate hook let to navigate programmatically 
   const navigate = useNavigate();
+
+  //useLocation hook returns the location object that represents the current URL
   const location = useLocation();
 
-  const handleInput = (e) => {
-    e.preventDefault();
-    setQuery(e.target.value);
-  }
-  const handleFind = (e) => {
-    navigate(`/search/${query}`);
-    setQuery('');
-  }
   
-
+// page re-rendering on 'location' change. Return 'path' state as true or false 
  useEffect(() => {
+
+   //String.localeCompare returns 0 or 1
     location.pathname.localeCompare("/") === 0 
   ?
     setPath(true)
@@ -42,6 +39,9 @@ function Header(props) {
       <div className={`${styles["app-name"]} text-gray-800`}>
         Movie app!
       </div>
+
+      {/* {If current route is not home page show component SearchForm in Header} */}
+
       {!path && 
 
         <SearchForm />

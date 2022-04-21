@@ -1,13 +1,15 @@
 import {useState} from 'react';
-import { icons } from 'react-icons';
 import { useNavigate } from "react-router-dom";
 import styles from './SearchForm.module.scss';
 import { HiOutlineArrowRight } from "react-icons/hi";
 
 function SearchForm(props) {
   const [query, setQuery] = useState('');
+
+  // useNavigate hook let to navigate programmatically 
   const navigate = useNavigate();
 
+  //Event handler on key 'Enter' press
   const Enter = (event) => {
     if (event.code === "Enter" || event.code === "NumpadEnter") {
       console.log("Enter key was pressed. Run your function.");
@@ -16,10 +18,13 @@ function SearchForm(props) {
     }
   };
 
+  // handler of input value
   const handleInput = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
   }
+
+  // handler of searching function
   const handleFind = (e) => {
     navigate(`/search/${query}`);
     setQuery('');

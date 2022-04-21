@@ -5,15 +5,22 @@ import styles from "./Movie.module.scss"
 
 function Movie() {
 
+  //useParams returns an object of URL parameters
   let { movieId } = useParams();
+  
+  //Refer to .env for API key
   const { REACT_APP_API_KEY } = process.env;
+
   const [movie, setMovie] = useState([]);
+  
+  // useNavigate hook let to navigate programmatically 
   const navigate = useNavigate();
 
   const handleReadMore = () => {
     navigate('/read-more');
   }
 
+  //
   useEffect(() => {
     async function handleFind () {
       try {
