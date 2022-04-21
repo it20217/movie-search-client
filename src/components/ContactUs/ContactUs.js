@@ -12,21 +12,24 @@ function ContactUs() {
   const [emailWarning, setEmailWarning] = useState(" ")
   const [messageWarning, setMessageWarning] = useState(" ")
   const [sendForm, setSendForm] = useState(false)
-  const [submitForm, setSubmitForm] = useState("")
 
   function handleName(e){
+    e.preventDefault()
     setName(e.target.value);
   }
 
   function handleTel(e){
+    e.preventDefault()
     setTel(e.target.value);
   }
 
   function handleEmail(e){
+    e.preventDefault()
     setEmail(e.target.value);
   }
 
   function handleMessage(e){
+    e.preventDefault()
     setMessage(e.target.value);
   }
 
@@ -94,7 +97,6 @@ function ContactUs() {
       setSendForm(true)
     }
     else{
-      setSubmitForm("Incorrect values")
       setSendForm(false)
     }
   }
@@ -104,6 +106,7 @@ function ContactUs() {
       <main className={styles.wrapper}>
 
         { /* Form */ }
+        {/* The message styling is partially based on the Tailwind component, available at: https://tailwindcss.com */}
         {!sendForm? (
         <form className="h-screen bg-cover bg-center flex justify-items-center items-center">
           <div className="px-10 lg:px-32 xl:px-40">
@@ -124,9 +127,6 @@ function ContactUs() {
             <textarea className={styles.message} onChange={handleMessage} placeholder="Enter your message" /><br />
             <span className={styles.warning}>{messageWarning}</span><br />
             <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-12 border border-gray-400 rounded shadow-md" onClick={handleForm}>Send</button><br /><br />
-            <h1 className="text-2xl font-semibold font-serif bg-white">
-              <span>{submitForm}</span> <br />
-            </h1>
           </div>
         </form>) : (
           <form className="h-screen bg-cover bg-center flex justify-items-center items-center">

@@ -45,6 +45,7 @@ function ReadMore(){
         return(
             <div>
             {/* Render movie details page */}
+            {/* The styling is based on the Tailwind component, available at: https://tailwindcss.com */}
               <div className="divide-y divide-slate-100">               
                   <div className="flex items-start space-x-6 p-6">
                     <img src={omdb} alt="Movie Poster" width="300" className="flex rounded-md bg-slate-100" />
@@ -109,6 +110,7 @@ function ReadMore(){
         return (
             <div className="flex items-start justify-center space-x-6 p-6 min-w-0 relative flex-auto">
                 {/* Render "Read More" search page*/}
+                {/* The styling is based on the Tailwind component, available at: https://tailwindcomponents.com/component/section-hero-famms */}
                 <section className={styles.wrapper}>
                     <div className="h-screen bg-cover bg-center flex justify-items-center items-center">
                         <div className="px-10 lg:px-32 xl:px-40">
