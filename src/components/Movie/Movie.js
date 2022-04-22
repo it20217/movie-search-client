@@ -40,7 +40,6 @@ function Movie() {
     return y.slice(0, 4)
    };
 
-  console.log(movie)
 
   return(
     <div className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
