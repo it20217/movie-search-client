@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header page component renders correctly 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="app-logo"
+    onClick={[Function]}
+  >
+    <img
+      alt="Logo"
+      src="cinema-154392__340.webp"
+    />
+  </div>
+  <div
+    className="app-name text-gray-800"
+  >
+    Movie app!
+  </div>
+  <div
+    className="search"
+  >
+    <div
+      className="form-wrapper"
+      style={
+        Object {
+          "marginTop": undefined,
+        }
+      }
+    >
+      <div
+        className="search-input"
+      >
+        <input
+          className="search-input"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Spiderman: No Way Home"
+          style={
+            Object {
+              "borderColor": "#273461",
+            }
+          }
+          type="search"
+          value=""
+        />
+      </div>
+      <div
+        className="btn-container"
+      >
+        <button
+          className="form-btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "Color": "#273461",
+              "borderColor": "#273461",
+            }
+          }
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="menu-icon-div"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 6h16M4 12h16M4 18h16"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  </div>
+</div>
+`;

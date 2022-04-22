@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie page component renders correctly 1`] = `
+<div
+  className="py-6 px-4 sm:p-6 md:py-10 md:px-8"
+>
+  <div
+    className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2"
+  >
+    <div
+      className="flex-col p-3 col-start-1 row-start-1 flex rounded-lg sm:row-start-2 sm:p-0 lg:row-start-1"
+    >
+      <h1
+        className="mt-1 text-2xl font-semibold sm:text-slate-900 md:text-2xl "
+      />
+      <div
+        className="mt-2 text-sm leading-4 font-medium sm:text-slate-500 dark:sm:text-slate-400"
+      />
+      <div
+        className=" mt-4 text-sm leading-4 font-medium sm:text-slate-500 dark:sm:text-slate-400"
+      />
+    </div>
+    <div
+      className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2"
+    >
+      <div
+        className="sr-only"
+      >
+        Reviews
+      </div>
+      <div
+        className="text-indigo-600 flex items-center dark:text-indigo-400"
+      >
+        <svg
+          aria-hidden="true"
+          className="mr-1 stroke-current dark:stroke-indigo-500"
+          fill="none"
+          height="24"
+          width="24"
+        >
+          <path
+            d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
+        <span>
+           
+          <span
+            className="text-slate-400 font-normal"
+          >
+            (128)
+          </span>
+        </span>
+      </div>
+      <div
+        className="sr-only"
+      >
+        Location
+      </div>
+    </div>
+    <div
+      className="mt-4 col-start-1 row-start-5 self-center sm:mt-0 sm:col-start-2 sm:row-start-5 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-5 lg:row-end-6"
+    >
+      <button
+        className="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg button"
+        onClick={[Function]}
+        type="button"
+      >
+        Read more
+      </button>
+    </div>
+    <p
+      className="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400"
+    />
+  </div>
+</div>
+`;

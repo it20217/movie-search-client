@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadMore page component renders correctly 1`] = `
+<div
+  className="flex items-start justify-center space-x-6 p-6 min-w-0 relative flex-auto"
+>
+  <section
+    className="wrapper"
+  >
+    <div
+      className="h-screen bg-cover bg-center flex justify-items-center items-center"
+    >
+      <div
+        className="px-10 lg:px-32 xl:px-40"
+      >
+        <h1
+          className="text-6xl font-semibold font-serif mb-6"
+        >
+          <span
+            className="text-red-500"
+          >
+            Need more information?
+          </span>
+           
+          <br />
+          <span>
+            Search below
+          </span>
+        </h1>
+        <p
+          className="text-lg max-w-md"
+        >
+          Just enter the movie title to see additional information from an alternative movies collection database.
+        </p>
+        <br />
+        <input
+          className="input"
+          onChange={[Function]}
+          placeholder="Movie title"
+          value=""
+        />
+        <button
+          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-12 border border-gray-400 rounded shadow-md"
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+`;

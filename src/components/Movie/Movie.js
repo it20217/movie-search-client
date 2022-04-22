@@ -20,7 +20,6 @@ function Movie() {
     navigate('/read-more');
   }
 
-  //
   useEffect(() => {
     async function handleFind () {
       try {
