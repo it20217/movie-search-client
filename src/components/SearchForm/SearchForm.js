@@ -12,7 +12,6 @@ function SearchForm(props) {
   //Event handler on key 'Enter' press
   const Enter = (event) => {
     if (event.code === "Enter" || event.code === "NumpadEnter") {
-      console.log("Enter key was pressed. Run your function.");
       event.preventDefault();
       handleFind();
     }

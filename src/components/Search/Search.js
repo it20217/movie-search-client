@@ -6,11 +6,10 @@ import genres from '../../genres'
 function Search() {
 
   //useParams returns an object of URL parameters
+  //route: /search/:searchQuery
   let { searchQuery } = useParams();
 
   let params = useParams();
-
-  console.log(searchQuery, params)
 
   const navigate = useNavigate();
 
@@ -21,7 +20,6 @@ function Search() {
 
   // Movie object return genres as a id number. Each number related to certain genre. Function getGenre returns genre name as String. Refer to genres.json
   const getGenre = (y) => {
-    console.log("y:", y);
    return genres.find(x => x.id === y )
   };
 
