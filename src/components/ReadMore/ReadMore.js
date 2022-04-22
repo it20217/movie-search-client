@@ -31,7 +31,7 @@ function ReadMore(){
         setWiki("")
         setQuery("")
         e.preventDefault()
-        var responce = await axios.get('http://www.omdbapi.com/?t='+query+'&apikey='+apiKey)
+        var responce = await axios.get('https://www.omdbapi.com/?t='+query+'&apikey='+apiKey)
         setOmdb(responce.data.Poster)
         setTitle(responce.data.Title)
         setYear(responce.data.Year)
