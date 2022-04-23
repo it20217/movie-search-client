@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm page component renders correctly 1`] = `
+<div
+  className="search"
+>
+  <div
+    className="form-wrapper"
+    style={
+      Object {
+        "marginTop": undefined,
+      }
+    }
+  >
+    <div
+      className="search-input"
+    >
+      <input
+        className="search-input"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Spiderman: No Way Home"
+        style={
+          Object {
+            "borderColor": "#273461",
+          }
+        }
+        type="search"
+        value=""
+      />
+    </div>
+    <div
+      className="btn-container"
+    >
+      <button
+        className="form-btn"
+        onClick={[Function]}
+        style={
+          Object {
+            "Color": "#273461",
+            "borderColor": "#273461",
+          }
+        }
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

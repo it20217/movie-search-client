@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer page component renders correctly 1`] = `
+<footer
+  className="wrapper"
+>
+  <div
+    className="footer"
+  >
+    <div
+      className="logo"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Logo"
+          className="pic"
+          src="cinema-154392__340.webp"
+        />
+      </a>
+    </div>
+    <div
+      className="links"
+    >
+      <div>
+        <a
+          className="link"
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+        </a>
+        <br />
+        <br />
+        <a
+          className="link"
+          href="/read-more"
+          onClick={[Function]}
+        >
+          Read More 
+        </a>
+        <br />
+        <br />
+        <a
+          className="link"
+          href="/contact-us"
+          onClick={[Function]}
+        >
+          Contact us 
+        </a>
+        <br />
+      </div>
+    </div>
+    <div
+      className="side"
+    >
+      <address>
+        <span>
+          Movie app!
+        </span>
+        <br />
+        email@email.com
+        <br />
+        0123456789
+        <br />
+        @movie_app!
+      </address>
+    </div>
+  </div>
+  <div
+    className="project"
+  >
+    <hr />
+    <hr />
+    <br />
+    Project created by 
+    <span>
+      Jaroslaw Polowy
+    </span>
+     and 
+    <span>
+      Igor Tokarev
+    </span>
+     © 2022 
+    <a
+      href="https://www.ncirl.ie/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      NCI
+    </a>
+  </div>
+</footer>
+`;

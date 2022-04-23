@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactUs page component renders correctly 1`] = `
+<div>
+  <main
+    className="wrapper"
+  >
+    <form
+      className="h-screen bg-cover bg-center flex justify-items-center items-center"
+    >
+      <div
+        className="px-10 lg:px-32 xl:px-40"
+      >
+        <h1
+          className="text-6xl font-semibold font-serif mb-6"
+        >
+          <span
+            className="text-red-500 bg-white"
+          >
+            Have a Question?
+          </span>
+           
+          <br />
+          <span
+            className="bg-white"
+          >
+            Send us a message
+          </span>
+        </h1>
+        <label>
+          Name
+        </label>
+        <br />
+        <input
+          className="name"
+          onChange={[Function]}
+          placeholder="Enter your name"
+          type="text"
+        />
+        <br />
+        <span
+          className="warning"
+        >
+           
+        </span>
+        <br />
+        <label>
+          Telephone
+        </label>
+        <br />
+        <input
+          className="phoneNumber"
+          onChange={[Function]}
+          placeholder="Enter your number"
+          type="tel"
+        />
+        <br />
+        <span
+          className="warning"
+        >
+           
+        </span>
+        <br />
+        <label>
+          Email
+        </label>
+        <br />
+        <input
+          className="email"
+          onChange={[Function]}
+          placeholder="Enter your email address"
+          type="email"
+        />
+         
+        <br />
+        <span
+          className="warning"
+        >
+           
+        </span>
+        <br />
+        <label>
+          Message
+        </label>
+        <br />
+        <textarea
+          className="message"
+          onChange={[Function]}
+          placeholder="Enter your message"
+        />
+        <br />
+        <span
+          className="warning"
+        >
+           
+        </span>
+        <br />
+        <button
+          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-12 border border-gray-400 rounded shadow-md"
+          onClick={[Function]}
+        >
+          Send
+        </button>
+        <br />
+        <br />
+      </div>
+    </form>
+    <div
+      className="image"
+    />
+  </main>
+</div>
+`;
